@@ -100,14 +100,10 @@ int main(int argc, char ** argv)
     clear();
     
     sprintf(score_str, "SCORE: %d", score);
-    mvprintw(SCREEN_HEIGHT/2-3, SCREEN_WIDTH/2 - 4, "         ");
     mvprintw(SCREEN_HEIGHT/2-2, SCREEN_WIDTH/2 - 4, "GAME OVER");
-    mvprintw(SCREEN_HEIGHT/2-1, SCREEN_WIDTH/2 - 4, "          ");
     mvprintw(SCREEN_HEIGHT/2, SCREEN_WIDTH/2 - (strlen(score_str)/2), "%s", score_str);
-    mvprintw(SCREEN_HEIGHT/2+1, SCREEN_WIDTH/2 - 4, "           ");
     mvprintw(SCREEN_HEIGHT/2+2, SCREEN_WIDTH/2 - 4, "[N]EW GAME");
-    mvprintw(SCREEN_HEIGHT/2+3, SCREEN_WIDTH/2 - 4, "[Q]UIT");
-    mvprintw(SCREEN_HEIGHT/2+4, SCREEN_WIDTH/2 - 4, "           ");
+    mvprintw(SCREEN_HEIGHT/2+3, SCREEN_WIDTH/2 - 41, "[Q]UIT");
     nodelay(stdscr, FALSE);
     refresh();
     while((c = getch()) != 'q' && c != 'Q' && c != 'n' && c != 'N');
